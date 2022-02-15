@@ -1,32 +1,66 @@
 ﻿using System;
+using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-namespace Lab1
+namespace lab2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("           Lab work №1");
-            Console.WriteLine("");
-            Console.WriteLine("  Console appendix structure in С#");
-            Console.WriteLine("");
-            Console.WriteLine("      Pinchuk Alla Dmytrivna");
-            Console.WriteLine("       KI-241, 172 specialty");
-            Console.WriteLine("");
-            Console.WriteLine("            Variant 1");
-            Console.WriteLine("");
-            Console.WriteLine("Task 2");
-            Console.WriteLine("");
-            double x = 0.31; // first value
-            double y = -0.0049;
-            double A = Math.Sqrt(Math.Log((double)4 / 3 + x) + (double)9 / 7) - Math.Pow(Math.E, -1 * Math.Sin(1.3 * x - 0.7));// math expression
-            Console.WriteLine($" x = {x}, y = {y}, A = {A}");// output result
-            double x1 = 2.5;// second value
-            double A1 = Math.Sqrt(Math.Log((double)4 / 3 + x1) + (double)9 / 7) - Math.Pow(Math.E, -1 * Math.Sin(1.3 * x - 0.7)); //math expression
-            Console.WriteLine($" x1 = {x1}, A1 = {A1}"); //output result
+            #region Task 1
+            /*
+            //input and formatting data 
+             int A; // = -14
+             float I; // = -10^4
+             double C; // = -0.00151 
+             bool L; // = false
+             string N; // ="Pinchuk"
+             Console.WriteLine("Input surname");
+             N = Console.ReadLine();
+             Console.WriteLine("Input A");
+             A = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine("Input I");
+             I = Convert.ToSingle(Console.ReadLine());
+             Console.WriteLine("Input C");
+             C = double.Parse(Console.ReadLine());
+             Console.WriteLine("Input L");
+             L = Convert.ToBoolean(Console.ReadLine());
+
+             //Output formatting results
+             Console.WriteLine();
+             Console.WriteLine("Formatting results");
+             Console.WriteLine();
+             Console.WriteLine($"surname = {N},L = {L}");
+             Console.WriteLine($"A = {A}, C = {C}, I = {I}");
+             Console.WriteLine();
+             Console.WriteLine("For exit press Enter");
+             Console.ReadLine();
+            */
+            #endregion
+
+            #region Task 2
             
+            string s;
+            double x, y;
+            StreamWriter f = new StreamWriter("out.txt");
+            StreamReader f1 = new StreamReader("in.txt");
+            f.WriteLine("Table of values");
+            f.WriteLine("I---------------------------------------------------------I");
+            f.WriteLine("I  Argument X             I         Function Y            I");
+        metka: s = f1.ReadLine();
+            if (s == null) goto metka1;
+            x = double.Parse(s);
+            y = (1 - Math.Pow(x, 2)) / (1 + Math.Pow(x, 4));
+            f.WriteLine($"I  x = {x:f2}              I          y = {y:f3}           I");
+            goto metka;
+        metka1: f.WriteLine("I---------------------------------------------------------I");
+            f.WriteLine("Prepared by Pinchuk Alla");
+            f.Close();
+            f1.Close();
+            
+            #endregion
+
         }
     }
 }
