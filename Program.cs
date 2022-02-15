@@ -43,8 +43,8 @@ namespace lab2
             
             string s;
             double x, y;
-            StreamWriter f = new StreamWriter("out.txt");
-            StreamReader f1 = new StreamReader("in.txt");
+            StreamWriter f = new StreamWriter("Lab2RES.txt");
+            StreamReader f1 = new StreamReader("LAB2.txt");
             f.WriteLine("Table of values");
             f.WriteLine("I---------------------------------------------------------I");
             f.WriteLine("I  Argument X             I         Function Y            I");
