@@ -43,11 +43,12 @@ namespace lab2
             
             string s;
             double x, y;
-            StreamWriter f = new StreamWriter("Lab2RES.txt");
+            StreamWriter f = new StreamWriter("Lab2.RES");
             StreamReader f1 = new StreamReader("LAB2.txt");
             f.WriteLine("Table of values");
             f.WriteLine("I---------------------------------------------------------I");
             f.WriteLine("I  Argument X             I         Function Y            I");
+            f.WriteLine("I---------------------------------------------------------I");
         metka: s = f1.ReadLine();
             if (s == null) goto metka1;
             x = double.Parse(s);
