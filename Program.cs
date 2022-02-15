@@ -9,7 +9,7 @@ namespace lab2
         static void Main(string[] args)
         {
             #region Task 1
-            /*
+            
             //input and formatting data 
              int A; // = -14
              float I; // = -10^4
@@ -36,7 +36,7 @@ namespace lab2
              Console.WriteLine();
              Console.WriteLine("For exit press Enter");
              Console.ReadLine();
-            */
+           
             #endregion
 
             #region Task 2
